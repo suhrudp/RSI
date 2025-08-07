@@ -1,0 +1,20 @@
+Package: RSI
+Title: Replicative Significance Index (RSI) and RSI*
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Suhrud", "Panchawagh", , "panchawagh.suhrud@mayo.edu", role = c("aut", "cre")),
+    person("Vinay", "Suresh", , "vinay.suresh@bnc.ox.ac.uk", role = "aut"),
+    person("Bhavik", "Bansal", , "bhavik.bansal@utsouthwestern.edu", role = "aut")
+  )
+Description: Computes the Replicative Significance Index (RSI)—the
+    proportion of hypothetical replications that achieve statistical
+    significance—plus a skewness-adjusted variant (RSI*). Includes
+    plotting utilities and simulation helpers.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
