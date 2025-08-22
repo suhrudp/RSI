@@ -32,7 +32,12 @@ rsi <- function(effect = 0.5,
 
   RSI      <- mean(p_values < alpha)
   gamma    <- moments::skewness(p_values)
-  RSI_star <- RSI + lambda * gamma
+  n_alpha <- sum(p_values < alpha)
+  RSI_star <- if (n_alpha > 0) {
+    mean(1 - p_values[p_values < alpha] / alpha)
+  } else {
+    NA_real_
+  }
 
   if (plot) {
     graphics::hist(p_values, breaks = 50, col = 'skyblue', border = 'white',
